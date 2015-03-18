@@ -1,31 +1,63 @@
 <?php
 
-error_reporting(E_ALL);
+define('DS', str_replace('\\', '/', DIRECTORY_SEPARATOR));
+define('APP_ROOT', str_replace('\\', '/', dirname(dirname(__FILE__))));
+define('CONFIG_DIR', APP_ROOT . DS . 'app' . DS . 'config' . DS);
+
+/**
+ * Constants Definitions
+ */
+require_once(CONFIG_DIR ."definitions.php");
 
 try {
-
     /**
      * Read the configuration
      */
-    $config = include __DIR__ . "/../app/config/config.php";
 
+    $config = require_once(CONFIG_DIR . "config.php");
+    
+    /**
+     * Read the modules
+     */
+    $modules = require_once(CONFIG_DIR . "modules.php");
+
+    /**
+     * Set default module
+     */
+    $defaultModule = $config->application->defaultModule;
+    
     /**
      * Read auto-loader
      */
-    include __DIR__ . "/../app/config/loader.php";
-
+    require_once(CONFIG_DIR . "loader.php");
+    
     /**
      * Read services
      */
-    include __DIR__ . "/../app/config/services.php";
+    require_once(CONFIG_DIR . "services.php");
+    
+    /**
+     * Read routers
+     */
+    require_once(CONFIG_DIR . "routes.php");
+    
+    /**
+     * Read dispatcher
+     */
+    require_once(CONFIG_DIR . "dispatcher.php");
 
     /**
-     * Handle the request
+     * Read database
      */
-    $application = new \Phalcon\Mvc\Application($di);
+    require_once(CONFIG_DIR . "database.php");
+    
+    /**
+     * Read application
+     */
+    require_once(CONFIG_DIR . "application.php");
 
-    echo $application->handle()->getContent();
-
-} catch (\Exception $e) {
+} catch (Phalcon\Exception $e) {
+    echo $e->getMessage();
+} catch (PDOException $e){
     echo $e->getMessage();
 }

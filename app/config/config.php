@@ -6,16 +6,17 @@ return new \Phalcon\Config(array(
         'host'        => 'localhost',
         'username'    => 'root',
         'password'    => '',
-        'dbname'      => 'test',
+        'dbname'      => 'greentech_lccf',
         'charset'     => 'utf8',
     ),
     'application' => array(
-        'controllersDir' => __DIR__ . '/../../app/controllers/',
-        'modelsDir'      => __DIR__ . '/../../app/models/',
-        'viewsDir'       => __DIR__ . '/../../app/views/',
-        'pluginsDir'     => __DIR__ . '/../../app/plugins/',
-        'libraryDir'     => __DIR__ . '/../../app/library/',
-        'cacheDir'       => __DIR__ . '/../../app/cache/',
+        'controllersDir' => APP_DIR . 'controllers' . DS,
+        'modelsDir'      => APP_DIR . 'models' . DS,
+        'viewsDir'       => APP_DIR . 'views' . DS,
+        'pluginsDir'     => APP_DIR . 'plugins' . DS,
+        'libraryDir'     => APP_DIR . 'library' . DS,
+        'cacheDir'       => APP_DIR . 'cache' . DS,
         'baseUri'        => '/lccf/',
+        'defaultModule'  => ''
     )
 ));
