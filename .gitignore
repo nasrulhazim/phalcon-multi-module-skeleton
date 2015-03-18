@@ -1,2 +1,5 @@
-/cache/
-/config/development/
+app/cache/**
+app/logs/**
+app/views/_compiled/*.volt.php
+public/temp/**
+modules/**/views/_compiled/*.volt.php
