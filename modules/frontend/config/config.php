@@ -6,7 +6,7 @@ return new \Phalcon\Config(array(
         'host'        => 'localhost',
         'username'    => 'root',
         'password'    => '',
-        'dbname'      => 'greentech_lccf',
+        'dbname'      => 'phalcon_multi_module',
         'charset'     => 'utf8',
     ),
     'module' => array(

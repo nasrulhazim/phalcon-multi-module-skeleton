@@ -29,6 +29,7 @@ use Phalcon\Mvc\Dispatcher as PhDispatcher;
 //                 }
 //             }
 //         );
+
 //         $dispatcher = new PhDispatcher();
 //         $dispatcher->setEventsManager($evManager);
 //         return $dispatcher;

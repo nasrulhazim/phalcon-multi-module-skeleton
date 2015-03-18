@@ -1,4 +1,4 @@
-<h3>Module View (Action) - View</h3>
+<h3>Module View (Action) - Edit</h3>
 <ul>
 	<li><a href="{{ url('') }}">Home</a></li>
 	<li><a href="{{ url('frontend/index/index') }}">Module: Frontend - index</a></li>

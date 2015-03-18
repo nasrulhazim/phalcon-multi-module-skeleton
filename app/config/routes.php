@@ -34,10 +34,10 @@ $di->set('router', function () use ($modules, $defaultModule)  {
 	 * http://docs.phalconphp.com/en/latest/reference/routing.html#not-found-paths
 	 * See [app.config.dispatcher.php]
 	 */
-	$router->notFound(array(
-	    'controller' => 'error',
-	    'action' => 'e404'
-	));
+	// $router->notFound(array(
+	//     'controller' => 'error',
+	//     'action' => 'e404'
+	// ));
 	
 	/**
 	 * Generic Modules Route

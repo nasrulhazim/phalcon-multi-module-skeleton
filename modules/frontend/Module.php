@@ -1,6 +1,6 @@
 <?php
 
-namespace LCCF\Frontend;
+namespace Mod\Frontend;
 
 use Phalcon\Loader,
     Phalcon\Mvc\Router,
@@ -21,8 +21,8 @@ class Module implements ModuleDefinitionInterface
 
         $loader->registerNamespaces(
             array(
-                'LCCF\Frontend\Controllers' => MODULES_DIR . $this->module_name . DS . 'controllers' . DS,
-                'LCCF\Frontend\Models'      => MODULES_DIR . $this->module_name . DS . 'models' . DS,
+                'Mod\Frontend\Controllers' => MODULES_DIR . $this->module_name . DS . 'controllers' . DS,
+                'Mod\Frontend\Models'      => MODULES_DIR . $this->module_name . DS . 'models' . DS,
             )
         );
 
@@ -50,7 +50,7 @@ class Module implements ModuleDefinitionInterface
           //$eventManager->attach('dispatch', new \Acl($this->module_name));
 
           $dispatcher->setEventsManager($eventManager);
-          $dispatcher->setDefaultNamespace("LCCF\Frontend\Controllers\\");
+          $dispatcher->setDefaultNamespace("Mod\Frontend\Controllers\\");
 
           return $dispatcher;
         });

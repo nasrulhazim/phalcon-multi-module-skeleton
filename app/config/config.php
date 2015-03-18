@@ -6,7 +6,7 @@ return new \Phalcon\Config(array(
         'host'        => 'localhost',
         'username'    => 'root',
         'password'    => '',
-        'dbname'      => 'greentech_lccf',
+        'dbname'      => 'phalcon_multi_module',
         'charset'     => 'utf8',
     ),
     'application' => array(
@@ -16,7 +16,7 @@ return new \Phalcon\Config(array(
         'pluginsDir'     => APP_DIR . 'plugins' . DS,
         'libraryDir'     => APP_DIR . 'library' . DS,
         'cacheDir'       => APP_DIR . 'cache' . DS,
-        'baseUri'        => '/lccf/',
+        'baseUri'        => '/phalcon-multi-module-skeleton/',
         'defaultModule'  => ''
     )
 ));

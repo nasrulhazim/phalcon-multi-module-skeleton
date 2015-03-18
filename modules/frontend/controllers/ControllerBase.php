@@ -1,6 +1,6 @@
 <?php
 
-namespace LCCF\Frontend\Controllers; 
+namespace Mod\Frontend\Controllers; 
 
 use Phalcon\Mvc\Controller;
 

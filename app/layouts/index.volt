@@ -1,1 +1,1 @@
-<h2>Layout (Controller)</h2>
+<h2>app.layout (Controller)</h2>

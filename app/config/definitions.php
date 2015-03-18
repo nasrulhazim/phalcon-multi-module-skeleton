@@ -13,3 +13,15 @@ if (APPLICATION_STAGE == APPLICATION_STAGE_DEVELOPMENT) {
     $debug = new \Phalcon\Debug();
 	$debug->listen();
 }
+
+use Phalcon\Logger\Adapter\File as FileAdapter;
+class Log {
+	private static $_logger;
+
+	public static function logger() {
+		if(empty(self::$_logger)) {
+			self::$_logger = new FileAdapter(APP_DIR . 'logs' . DS . 'phalcon.multi-mod.log');
+		}
+		return self::$_logger;
+	}
+}

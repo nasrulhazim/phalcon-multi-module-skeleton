@@ -2,7 +2,7 @@
 
 return array(
 	'frontend' => array(
-		'className' => 'LCCF\Frontend\Module',
+		'className' => 'Mod\Frontend\Module',
 		'path' => MODULES_DIR . 'frontend' . DS . 'Module.php'
 	)
 );
