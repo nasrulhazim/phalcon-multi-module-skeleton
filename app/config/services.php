@@ -30,13 +30,25 @@ $di['session'] = function() {
     return $session;
 };
 
-/*
-*  Prevent CSRF
-*/
+/**
+ *  Prevent CSRF
+ */
 $di->setShared('session', function() {
     $session = new Phalcon\Session\Adapter\Files();
     $session->start();
     return $session;
+});
+
+/**
+ *  Set Flash
+ */
+$di->set('flash', function() {
+    return new Phalcon\Flash\Session(array(
+            'error' => 'alert alert-dismissable alert-danger',
+            'success' => 'alert alert-dismissable alert-success',
+            'notice' => 'alert alert-dismissable alert-info',
+            'warning' => 'alert alert-dismissable alert-warning',
+        ));
 });
 
 $di->set('view', function() use ($config) {
