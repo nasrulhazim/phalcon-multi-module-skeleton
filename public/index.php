@@ -10,10 +10,10 @@ define('CONFIG_DIR', APP_ROOT . DS . 'app' . DS . 'config' . DS);
 require_once(CONFIG_DIR ."definitions.php");
 
 try {
+    
     /**
      * Read the configuration
      */
-
     $config = require_once(CONFIG_DIR . "config.php");
     
     /**

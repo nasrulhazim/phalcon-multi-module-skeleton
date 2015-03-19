@@ -2,15 +2,21 @@
 <html>
 	<head>
 		<title>{{ title }}</title>
-		{{ stylesheet_link("css/bootstrap.min.css") }}  
+		{{ stylesheet_link("css/bootstrap.min.css") }}
+		{{ stylesheet_link("vendor/font-awesome/css/font-awesome.min.css") }}
+		{{ stylesheet_link("css/app.css") }} 
 		{{ assets.outputCss() }} 
 	</head>
 	<body>
+		<!-- <h1>Main Layout(module)</h1> -->
 		<div class="container">
 			{{ content() }}
 		</div>
-		{{ javascript_include("js/jquery-1.11.2.js") }}
-		{{ javascript_include("js/boostrap.min.js") }}
+		<footer style="position: absolute; margin-left: auto;margin-right: auto;bottom: 0px;right: 7px; font-size: 9px;">
+			<center>Maintained by <a href="http://nasrulhazim.wordpress.com">nasrulhazim.m</a></center>
+		</footer>
+		{{ javascript_include("js/jquery-1.11.2.min.js") }}
+		{{ javascript_include("js/bootstrap.min.js") }}
 		{{ assets.outputJs() }}
 	</body>
 </html>
